@@ -25,10 +25,10 @@ jobs:
     - name: Mikero Depends
       run: |
         sudo apt-get install liblzo2-2 libvorbis0a libvorbisfile3 libvorbisenc2 libogg0 libuchardet0
-        echo "Changing Ownership"
-        sudo chown -R $(whoami) /usr/local/bin
-        sudo chown -R $(whoami) /usr/local/lib
-        echo "Changed Ownership"
+        # echo "Changing Ownership"
+        # sudo chown -R $(whoami) /usr/local/bin
+        # sudo chown -R $(whoami) /usr/local/lib
+        # echo "Changed Ownership"
     - name: Install and Build Mikero
       uses: SCHTAMP/mikero-install@v2
       with:
@@ -36,10 +36,7 @@ jobs:
         build-path: ./dist
     - name: Test case
       run: |
-        ldconfig -p | grep libdepbo
-        makepbo --help
-        
-        
+        ls -l /usr/local/bin
     - uses: actions/upload-artifact@v2
       with:
         name: map-${{ github.sha }}
