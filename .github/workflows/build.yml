@@ -25,7 +25,7 @@ jobs:
     - name: Mikero Depends
       run: |
         sudo apt-get install liblzo2-2 libvorbis0a libvorbisfile3 libvorbisenc2 libogg0 libuchardet0
-        which rsync
+        sudo chown -R $(whoami) /usr/local
     - name: Install and Build Mikero
       uses: SCHTAMP/mikero-install@v2
       with:
