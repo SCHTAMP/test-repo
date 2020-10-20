@@ -39,6 +39,9 @@ jobs:
         ls -l /usr/local/bin
         ldd /usr/local/bin/makepbo
         ls -l /usr/local/lib
+        sudo ldconfig
+        makepbo --help
+
     - uses: actions/upload-artifact@v2
       with:
         name: map-${{ github.sha }}
