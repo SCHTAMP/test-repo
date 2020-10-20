@@ -38,6 +38,7 @@ jobs:
       run: |
         ls -l /usr/local/bin
         ldd /usr/local/bin/makepbo
+        ls -l /usr/local/lib
     - uses: actions/upload-artifact@v2
       with:
         name: map-${{ github.sha }}
