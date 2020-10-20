@@ -34,13 +34,6 @@ jobs:
       with:
         path: src
         build-path: ./dist
-    - name: Test case
-      run: |
-        ls -l /usr/local/bin
-        ldd /usr/local/bin/makepbo
-        ls -l /usr/local/lib
-        sudo ldconfig
-        makepbo --help
 
     - uses: actions/upload-artifact@v2
       with:
