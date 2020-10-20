@@ -37,7 +37,7 @@ jobs:
     - name: Test case
       run: |
         ls -l /usr/local/bin
-        ldd /usr/local/lib/makepbo
+        ldd /usr/local/bin/makepbo
     - uses: actions/upload-artifact@v2
       with:
         name: map-${{ github.sha }}
