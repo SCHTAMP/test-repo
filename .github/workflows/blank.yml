@@ -26,4 +26,5 @@ jobs:
         run: |
           echo $PATH
           echo $LD_LIBRARY_PATH
+          ldconfig -p
           echo test, and deploy your project.
